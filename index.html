@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>کانون کتاب ترنج - دانشگاه اردکان</title>
+  <style>
+    @import url('https://cdn.jsdelivr.net/gh/rastikerdar/iransans-font@v2.0.0/dist/font-face.css');
+
+    body {
+      margin: 0;
+      font-family: 'IRANSans', Tahoma, sans-serif;
+      background: linear-gradient(to bottom, #fdfbf6, #f8f3e7);
+      overflow-x: hidden;
+      direction: rtl;
+    }
+
+    /* هدر نسخه اول */
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #1b4332, #f77f00);
+      color: #fff;
+    }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 15px;
+      border-radius: 50%;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      object-fit: cover;
+      border: 4px solid #fff;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    /* بخش اصلی */
+    main {
+      margin-top: 40px;
+      padding: 20px;
+    }
+
+    .box {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 700px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .box:hover {
+      background: #f5e6c8;
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+    }
+
+    .box h2 {
+      margin: 0;
+    }
+
+    .box .content {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: all 0.5s ease;
+      margin-top: 0;
+    }
+
+    .box.active .content {
+      max-height: 600px;
+      opacity: 1;
+      margin-top: 10px;
+    }
+
+    /* باکس راه‌های ارتباطی */
+    .contact-box {
+      text-align: center;
+      cursor: default;
+    }
+
+    .contact-box:hover {
+      background: white;
+      transform: none;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    /* دکمه‌ها */
+    .btn {
+      display: inline-block;
+      margin: 10px 5px;
+      padding: 12px 20px;
+      border-radius: 30px;
+      background: #ff7043;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #e64a19;
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      .btn {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+      }
+    }
+
+    /* فوتر */
+    footer {
+      background: linear-gradient(135deg, #1b4332, #f77f00);
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    footer img {
+      height: 40px;
+      margin: 0 15px;
+    }
+  </style>
+</head>
+<body style="font-family:Arial, Helvetica, sans-serif;">
+
+  <!-- هدر نسخه اول -->
+  <header style="font-family:Arial, Helvetica, sans-serif;">
+    <img src="LOGO.png" alt="لوگوی کانون کتاب ترنج">
+    <h1>کانون کتاب ترنج - دانشگاه اردکان</h1>
+    <p>ترنج؛ جایی برای روح رنجیده تو 🌿</p>
+  </header>
+
+  <!-- محتوای اصلی -->
+  <main>
+    <div class="box" onclick="toggleBox(this)">
+      <h2>🌿 شعار و معرفی کوتاه</h2>
+      <div class="content">
+        <p>«ترنج» یعنی رنج تو؛ و کتاب، التیام روح رنجیده‌ی تو.</p>
+        <p>ما باور داریم کتاب فقط صفحه‌ای پر از کلمات نیست؛ هر کتاب سفریه به درون خودت، به عمق فکر و به آرامش.</p>
+      </div>
+    </div>
+
+    <div class="box" onclick="toggleBox(this)">
+      <h2>📚 فعالیت‌های کانون</h2>
+      <div class="content">
+        <p>📖 معرفی کتاب <br>
+        🎙️ تولید و گوش دادن پادکست <br>
+        🎬 پخش فیلم‌های بر گرفته از کتاب  <br>
+        📖 نمایشگاه کتاب آثار دانشجویی</p>
+      </div>
+    </div>
+
+    <div class="box" onclick="toggleBox(this)">
+      <h2>✨ نقش اعضا و مشارکت</h2>
+      <div class="content">
+        <p>در ترنج، تو فقط یک عضو نیستی؛ تو خودِ ماجرا هستی.
+        انتخاب کتاب‌ها، طراحی برنامه‌ها و مسیر کانون، همه با مشارکت تو معنا پیدا می‌کنه.
+        جایی که می‌تونی بخندی، یاد بگیری و رشد کنی.</p>
+      </div>
+    </div>
+
+    <div class="box contact-box">
+      <h2>🔗 راه‌های ارتباطی با ما</h2>
+      <a href="https://www.instagram.com/kanon_ketab_torang" class="btn">اینستاگرام</a>
+      <a href="https://eitaa.com/torrangg" class="btn">ایتا</a>
+      <a href="https://t.me/Kanon_Ketab_Torang" class="btn">تلگرام</a>
+    </div>
+  </main>
+
+  <!-- فوتر -->
+  <footer>
+    <img src="LOGO.png" alt="لوگو ترنج" style="width: 14%;height: 14%;">
+    <img src="logo-uni.png" alt="لوگو دانشگاه"style="width: 11%;height: 11%;">
+  </footer>
+
+  <script>
+    function toggleBox(box) {
+      box.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
